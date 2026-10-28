@@ -15,7 +15,7 @@
    python -m http.server 8000
    # 浏览器打开 http://localhost:8000
    ```
-
+3. 本仓库已部署，可用浏览器直接访问：<https://lulu3103.github.io/Study-Turntable/>
 所有数据保存在浏览器的 `localStorage` 中（键名 `study-turntable:v1`），刷新或重开页面都不会丢失。
 
 ## 功能说明
@@ -24,9 +24,9 @@
 
 顶栏提供四个快捷按钮，前三个在新标签页打开：
 
-- **ttsx每日计划**：<https://toashore.cn/public/apps/calendar/online/index.html?qq_aio_chat_type=2>
-- **ttsx口诀/题库**：<https://rray1228.github.io/neike-306-tiku/?view=mnemonics>
-- **GitHub**：<https://github.com/LuLu3103/Study-Turntable>（直达项目仓库）
+- **ttsx每日计划**
+- **ttsx口诀/题库**
+- **GitHub**：直达本项目仓库
 - **使用说明**：点击弹出简洁使用说明（支持关闭按钮、点击遮罩、按 Esc 关闭）
 
 ### 学习转盘（30 份内容）
@@ -108,16 +108,6 @@ node tests/screenshot.js
 - **调整主题色**：编辑 `css/styles.css` 顶部的 `:root` 变量（`--blue-*`、`--ink` 等）；
 - **调整计时规则**：`js/core.js` 中 `findCooldown` 控制「学习任务时长结束前不能再次抽取」，`findRestTimer` 控制休息倒计时（可跳过）；两者都用记录里的 `createdAt` 推算，刷新后依然有效；
 - **调整统计口径**：如需仅统计「已完成」任务的时长，可在 `js/core.js` 的 `summarize` 中把累加逻辑限定为 `record.done`。
-
-## 部署到 GitHub Pages
-
-项目是纯静态页面，无构建步骤，可直接部署：
-
-1. 把本目录内的文件推送到仓库 `LuLu3103/Study-Turntable` 的默认分支（让 `index.html` 位于仓库根目录）；
-2. 打开仓库 **Settings → Pages**，Source 选择「Deploy from a branch」，分支选 `main`、目录选 `/ (root)`；
-3. 保存后等待约一分钟，访问 `https://lulu3103.github.io/Study-Turntable/` 即可。
-
-> `index.html` 与 `README.md` 可以一起放在仓库根目录：GitHub 仓库页会展示这份说明，Pages 则打开 `index.html`。
 
 ## 兼容性
 
