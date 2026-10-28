@@ -2,7 +2,7 @@
 
 一个纯前端、离线可用的学习任务转盘：转动转盘抽取一份「学习 / 休息」时长任务，记录在任务栏里，并在统计栏查看当天学习与休息的累计时长，支持生成统计图表、保存图表 PNG、查看往日数据。
 
-![桌面端预览](tests/shots/03-after-chart.png)
+<img width="1440" height="1300" alt="03-after-chart" src="https://github.com/user-attachments/assets/ff1cae4f-d3f1-4331-9bc9-2831bb6e402f" />
 
 ## 快速开始
 
