@@ -1,0 +1,253 @@
+{
+  "initial": {
+    "title": "Study Turntable · 学习转盘",
+    "wheelSegments": 30,
+    "wheelPixels": 406,
+    "tasks": 0,
+    "spinDisabled": false,
+    "chartDisabled": true,
+    "chartExpanded": "false",
+    "links": [
+      {
+        "tag": "A",
+        "text": "ttsx每日计划",
+        "href": "https://toashore.cn/public/apps/calendar/online/index.html?qq_aio_chat_type=2",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "A",
+        "text": "ttsx口诀/题库",
+        "href": "https://rray1228.github.io/neike-306-tiku/?view=mnemonics",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "A",
+        "text": "GitHub",
+        "href": "https://github.com/LuLu3103/Study-Turntable",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      },
+      {
+        "tag": "BUTTON",
+        "text": "使用说明",
+        "href": null,
+        "target": null,
+        "rel": null
+      }
+    ],
+    "tabs": [
+      {
+        "range": "today",
+        "active": true,
+        "selected": "true"
+      },
+      {
+        "range": "week",
+        "active": false,
+        "selected": "false"
+      },
+      {
+        "range": "month",
+        "active": false,
+        "selected": "false"
+      }
+    ],
+    "helpModalHidden": true,
+    "helpBtnTag": "BUTTON",
+    "localStorage": "available"
+  },
+  "help": {
+    "hidden": false,
+    "title": "使用说明",
+    "items": [
+      "抽取任务",
+      "计时规则",
+      "任务栏",
+      "统计栏",
+      "数据备份"
+    ],
+    "bodyText": "\n    \n    \n      \n        \n          使用说明\n          Study Turntable · 一分钟上手\n        \n        ×\n      \n      \n        \n          抽取任务\n          点击「抽取学习任务」或转盘中心的「抽取」，转盘停止后抽到的时长会自动记入任务栏。\n        \n        \n          计时规则\n          抽到学习任务，必须等倒计时结束才能再抽；抽到休息任务，可以随时点「跳过休息」抽下一轮。\n        \n        \n          任务栏\n          可勾选完成、删除记录、清空当日；用顶栏日期选择器可查看往日数据（只读）。\n        \n        \n          统计栏\n          切换今日 / 近 7 天 / 近 30 天查看累计数据，生成图表后可保存为 PNG，也可以随手收起。\n        \n        \n          数据备份\n          记录只保存在本机浏览器；可在统计栏导出 / 导入 JSON 备份，清空数据前建议先导出。\n        \n      \n      \n        完全离线可用 · 数据保存在本机浏览器\n        知道了\n      \n    \n  ",
+    "dialog": true,
+    "ariaModal": "true",
+    "lock": true
+  },
+  "helpClosed": {
+    "hidden": true,
+    "lock": false
+  },
+  "afterSpin": {
+    "spinning": false,
+    "resultTime": "10min",
+    "resultType": "学习任务",
+    "resultNote": "专注计时中 · 剩余 09:59，结束后可再抽",
+    "tasks": 1,
+    "savedRecords": 1,
+    "record": {
+      "id": "rmvs4xeos0px4b",
+      "type": "study",
+      "minutes": 10,
+      "done": false,
+      "createdAt": 1793193192604
+    },
+    "transform": "rotate(354deg)",
+    "spinDisabled": true,
+    "spinText": "本轮任务进行中 · 剩余 09:59",
+    "progressHidden": false,
+    "againHidden": true,
+    "againText": "再抽一次",
+    "wheelPill": "计时中",
+    "taskPill": "计时中",
+    "delDisabled": true,
+    "abandonPresent": false,
+    "skipElement": false
+  },
+  "blockedSpin": {
+    "records": 1,
+    "tasks": 1
+  },
+  "afterDone": {
+    "doneRows": 1,
+    "statDone": "1项",
+    "pressed": "true",
+    "footHint": "已完成 1 项 · 待完成 0 项"
+  },
+  "chart": {
+    "visible": true,
+    "donutWidth": 190,
+    "donutHeight": 190,
+    "barsWidth": 310,
+    "barsHeight": 172,
+    "saveDisabled": false,
+    "legend": "学习 10min",
+    "buttonText": "收起图表",
+    "expanded": "true",
+    "barTitle": "每次任务时长",
+    "hint": "按抽取顺序排列 · 虚线为平均 10min"
+  },
+  "collapsed": {
+    "hidden": true,
+    "saveDisabled": true,
+    "buttonText": "生成统计图表",
+    "expanded": "false"
+  },
+  "chartDownload": [
+    "study-turntable-chart-20261028.png"
+  ],
+  "rangeWeek": {
+    "activeRange": "week",
+    "statsSub": "10-22 至 10-28 · 近 7 天",
+    "statsNote": "近 7 天累计 · 有记录 1 天 · 日均学习 10min（按有记录的天数计算）。",
+    "barTitle": "每日学习 / 休息时长",
+    "chartVisible": true,
+    "saveDisabled": false
+  },
+  "rangeDownload": [
+    "study-turntable-chart-20261028-7d.png"
+  ],
+  "rangeMonth": {
+    "activeRange": "month",
+    "statsSub": "09-29 至 10-28 · 近 30 天",
+    "chartVisible": true,
+    "barTitle": "每日学习 / 休息时长"
+  },
+  "rangeCollapsed": true,
+  "cooldownOver": {
+    "spinDisabled": false,
+    "spinText": "抽取学习任务",
+    "progressHidden": true,
+    "resultNote": "当日最近一次抽取 · 已完成",
+    "wheelPill": "今天",
+    "delDisabled": false
+  },
+  "rest": {
+    "spinDisabled": false,
+    "resultType": "休息任务",
+    "resultTime": "15min",
+    "resultNote": "休息计时中 · 剩余 14:59，可跳过直接抽下一轮",
+    "againHidden": false,
+    "againText": "跳过休息",
+    "progressHidden": false,
+    "wheelPill": "休息中",
+    "taskPill": "休息中",
+    "statRest": "15min",
+    "tasks": 2
+  },
+  "beforeSkip": 2,
+  "afterSkip": {
+    "records": 3,
+    "tasks": 3,
+    "restStillThere": true
+  },
+  "historyDate": "2026-10-27",
+  "history": {
+    "spinDisabled": true,
+    "wheelPill": "历史 · 只读",
+    "taskPill": "历史 · 只读",
+    "viewMeta": "历史数据 · 只读",
+    "taskRows": 0,
+    "chartHidden": true,
+    "saveDisabled": true,
+    "studyText": "0min",
+    "rangeTodayText": "当日"
+  },
+  "backToday": {
+    "spinDisabled": false,
+    "tasks": 3
+  },
+  "dataDownload": [
+    "study-turntable-data-20261028.json"
+  ],
+  "exportedData": {
+    "app": "study-turntable",
+    "version": 1,
+    "exportedAt": "2026-10-28T13:13:40.727Z",
+    "days": {
+      "2026-10-28": {
+        "records": [
+          {
+            "id": "rmvs4xw27a6sa1",
+            "type": "study",
+            "minutes": 20,
+            "done": false,
+            "createdAt": 1793192011921
+          },
+          {
+            "id": "rest-test",
+            "type": "rest",
+            "minutes": 15,
+            "done": false,
+            "createdAt": 1793192311921
+          },
+          {
+            "id": "rmvs4xeos0px4b",
+            "type": "study",
+            "minutes": 10,
+            "done": true,
+            "createdAt": 1793192611921
+          }
+        ]
+      }
+    }
+  },
+  "reload": {
+    "tasks": 3,
+    "statStudy": "30min",
+    "statRest": "15min",
+    "records": 3,
+    "doneRows": 1,
+    "resultHidden": false,
+    "resultNote": "当日最近一次抽取 · 已完成",
+    "spinDisabled": false
+  },
+  "mobile": {
+    "width": 390,
+    "horizontalOverflow": false,
+    "wheelWidth": 306,
+    "chartDisabled": false,
+    "linkCount": 4,
+    "tabCount": 3
+  },
+  "pageErrors": []
+}

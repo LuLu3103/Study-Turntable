@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Study Turntable 学习转盘：抽取学习 / 休息任务，记录每日专注时长，支持查看往日数据与统计图表。">
+  <meta name="theme-color" content="#2563eb">
+  <title>Study Turntable · 学习转盘</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%232563eb'/%3E%3Cpath d='M32 32 L32 6 A26 26 0 0 1 54 19 Z' fill='%2393c5fd'/%3E%3Ccircle cx='32' cy='32' r='7' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9.2"></circle>
+            <path d="M12 12V3.2"></path>
+            <path d="M12 12l7.6 5.2"></path>
+            <circle cx="12" cy="12" r="2.4" fill="currentColor" stroke="none"></circle>
+          </svg>
+        </span>
+        <div class="brand-text">
+          <h1>Study Turntable</h1>
+          <p>学习转盘 · 抽一份任务，专注一段时间</p>
+        </div>
+      </div>
+
+      <nav class="topbar-links" aria-label="常用链接">
+        <a
+          class="top-link"
+          href="https://toashore.cn/public/apps/calendar/online/index.html?qq_aio_chat_type=2"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="打开 ttsx 每日计划"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.4" y="5" width="17.2" height="16" rx="3"></rect>
+            <path d="M8 3.2v3.6M16 3.2v3.6M3.4 10.4h17.2"></path>
+            <path d="M8 14.4h2.2M13.8 14.4h2.2M8 17.6h2.2"></path>
+          </svg>
+          <span>ttsx每日计划</span>
+          <svg class="top-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 4h6v6"></path>
+            <path d="M20 4 10 14"></path>
+            <path d="M19 14v4.5A1.5 1.5 0 0 1 17.5 20h-13A1.5 1.5 0 0 1 3 18.5v-13A1.5 1.5 0 0 1 4.5 4H9"></path>
+          </svg>
+        </a>
+        <a
+          class="top-link"
+          href="https://rray1228.github.io/neike-306-tiku/?view=mnemonics"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="打开 ttsx 口诀 / 题库"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 5.6A2.6 2.6 0 0 1 6.6 3H19v15.4H6.6A2.6 2.6 0 0 0 4 21z"></path>
+            <path d="M4 18.4A2.6 2.6 0 0 1 6.6 16H19"></path>
+            <path d="M8.4 7.2h6.4M8.4 10.6h4.6"></path>
+          </svg>
+          <span>ttsx口诀/题库</span>
+          <svg class="top-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 4h6v6"></path>
+            <path d="M20 4 10 14"></path>
+            <path d="M19 14v4.5A1.5 1.5 0 0 1 17.5 20h-13A1.5 1.5 0 0 1 3 18.5v-13A1.5 1.5 0 0 1 4.5 4H9"></path>
+          </svg>
+        </a>
+        <a
+          class="top-link"
+          href="https://github.com/LuLu3103/Study-Turntable"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="打开 GitHub 项目仓库"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.82 0 .27.18.6.69.49A10.3 10.3 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"></path>
+          </svg>
+          <span>GitHub</span>
+          <svg class="top-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 4h6v6"></path>
+            <path d="M20 4 10 14"></path>
+            <path d="M19 14v4.5A1.5 1.5 0 0 1 17.5 20h-13A1.5 1.5 0 0 1 3 18.5v-13A1.5 1.5 0 0 1 4.5 4H9"></path>
+          </svg>
+        </a>
+        <button class="top-link top-link--button" id="helpBtn" type="button" title="查看使用说明" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9"></circle>
+            <path d="M9.6 9.3a2.5 2.5 0 1 1 3.5 2.3c-.7.35-1.1.8-1.1 1.65v.35"></path>
+            <path d="M12 16.9h.01"></path>
+          </svg>
+          <span>使用说明</span>
+        </button>
+      </nav>
+
+      <div class="clock-block">
+        <div class="clock" id="clock">--:--:--</div>
+        <div class="clock-meta">
+          <span id="clockDate">正在读取本地时间…</span>
+          <span class="clock-dot" aria-hidden="true"></span>
+          <span id="viewMeta">今天</span>
+        </div>
+      </div>
+
+      <div class="date-block">
+        <div class="date-row">
+          <button class="icon-btn" id="prevDay" type="button" title="前一天" aria-label="查看前一天">‹</button>
+          <input type="date" id="datePicker" aria-label="选择要查看的日期">
+          <button class="icon-btn" id="nextDay" type="button" title="后一天" aria-label="查看后一天">›</button>
+        </div>
+        <div class="date-meta">
+          <span class="storage-pill" id="storagePill" title="数据保存在本机浏览器">本地已保存</span>
+          <button class="btn btn-ghost btn-sm" id="todayBtn" type="button">回到今天</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- 学习转盘 -->
+      <section class="card wheel-card" aria-label="学习转盘">
+        <div class="card-head">
+          <div>
+            <h2>学习转盘</h2>
+            <p class="card-sub">30 份任务 · 25 份学习时长 + 5 份休息</p>
+          </div>
+          <span class="pill" id="wheelModePill">今天</span>
+        </div>
+
+        <div class="wheel-stage" id="wheelStage">
+          <div class="wheel-canvas-wrap">
+            <canvas id="wheelCanvas" role="img" aria-label="包含 30 个学习与休息时长的转盘"></canvas>
+          </div>
+          <div class="wheel-pointer" aria-hidden="true"></div>
+          <button class="wheel-hub" id="hubSpin" type="button" aria-label="抽取任务">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5.4v13.2c0 .8.9 1.3 1.6.9l10.2-6.6c.6-.4.6-1.4 0-1.8L9.6 4.5C8.9 4.1 8 4.6 8 5.4z"></path>
+            </svg>
+            <span>抽取</span>
+          </button>
+        </div>
+
+        <div class="wheel-legend">
+          <span class="legend-item"><i class="legend-dot legend-dot--study"></i>学习时长</span>
+          <span class="legend-item"><i class="legend-dot legend-dot--rest"></i>休息时长</span>
+          <span class="legend-note">最小 10min · 最大 2h</span>
+        </div>
+
+        <button class="btn btn-primary btn-xl" id="spinBtn" type="button">抽取学习任务</button>
+
+        <div class="result" id="resultCard" aria-live="polite">
+          <div class="result-empty" id="resultEmpty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="8.5"></circle>
+              <circle cx="12" cy="12" r="4.6"></circle>
+              <circle cx="12" cy="12" r="1" fill="currentColor"></circle>
+            </svg>
+            <p id="resultEmptyText">点击下方按钮，抽出今天的任务吧</p>
+          </div>
+          <div class="result-body" id="resultBody" hidden>
+            <div class="result-main">
+              <span class="result-type" id="resultType">学习任务</span>
+              <strong class="result-time" id="resultTime">45min</strong>
+              <span class="result-note" id="resultNote">已加入今日任务，完成后记得打卡</span>
+              <div class="result-progress" id="resultProgress" hidden>
+                <span id="resultProgressBar"></span>
+              </div>
+            </div>
+            <div class="result-actions">
+              <button class="btn btn-ghost btn-sm" id="resultDone" type="button">标记完成</button>
+              <button class="btn btn-primary btn-sm" id="resultAgain" type="button">再抽一次</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="side">
+        <!-- 任务栏 -->
+        <section class="card tasks-card" aria-label="任务栏">
+          <div class="card-head">
+            <div>
+              <h2>任务栏</h2>
+              <p class="card-sub" id="taskSub">今天 · 共 0 条记录</p>
+            </div>
+            <span class="pill pill--muted" id="taskViewPill">今天</span>
+          </div>
+
+          <ul class="task-list" id="taskList"></ul>
+          <div class="empty-state" id="taskEmpty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 6h11"></path>
+              <path d="M9 12h11"></path>
+              <path d="M9 18h11"></path>
+              <path d="M4 6h.01"></path>
+              <path d="M4 12h.01"></path>
+              <path d="M4 18h.01"></path>
+            </svg>
+            <p id="taskEmptyText">还没有任务，转动转盘开始今天的学习吧</p>
+          </div>
+
+          <div class="card-foot">
+            <span class="foot-hint" id="taskFootHint">已完成 0 项 · 待完成 0 项</span>
+            <button class="btn btn-danger-ghost btn-sm" id="clearDayBtn" type="button">清空当日</button>
+          </div>
+        </section>
+
+        <!-- 统计栏 -->
+        <section class="card stats-card" aria-label="统计栏">
+          <div class="card-head">
+            <div>
+              <h2>统计栏</h2>
+              <p class="card-sub" id="statsSub">今日累计</p>
+            </div>
+            <span class="pill" id="statsPill">今天</span>
+          </div>
+
+          <div class="range-tabs" role="tablist" aria-label="统计时间范围">
+            <button class="range-tab is-active" type="button" role="tab" aria-selected="true" data-range="today" id="rangeToday">今日</button>
+            <button class="range-tab" type="button" role="tab" aria-selected="false" data-range="week" id="rangeWeek">近 7 天</button>
+            <button class="range-tab" type="button" role="tab" aria-selected="false" data-range="month" id="rangeMonth">近 30 天</button>
+          </div>
+
+          <div class="stat-grid">
+            <div class="stat stat--study">
+              <span class="stat-label">学习时间</span>
+              <strong class="stat-value" id="statStudy">0min</strong>
+              <span class="stat-sub" id="statStudySub">共 0 次</span>
+            </div>
+            <div class="stat stat--rest">
+              <span class="stat-label">休息时间</span>
+              <strong class="stat-value" id="statRest">0min</strong>
+              <span class="stat-sub" id="statRestSub">共 0 次</span>
+            </div>
+            <div class="stat stat--task">
+              <span class="stat-label">已完成</span>
+              <strong class="stat-value" id="statDone">0<small>项</small></strong>
+              <span class="stat-sub" id="statDoneSub">共 0 条任务</span>
+            </div>
+          </div>
+
+          <div class="ratio">
+            <div class="ratio-labels">
+              <span>学习占比 <b id="ratioStudy">0%</b></span>
+              <span>休息占比 <b id="ratioRest">0%</b></span>
+            </div>
+            <div class="ratio-bar">
+              <span class="ratio-study" id="ratioStudyBar"></span>
+              <span class="ratio-rest" id="ratioRestBar"></span>
+            </div>
+          </div>
+
+          <p class="stats-note" id="statsNote">学习 / 休息时长按当天抽到的任务累计；勾选完成仅用于打卡统计。</p>
+
+          <div class="stats-actions">
+            <button class="btn btn-primary-ghost" id="chartBtn" type="button" aria-expanded="false">生成统计图表</button>
+            <button class="btn btn-ghost" id="saveChartBtn" type="button" disabled>保存图表 PNG</button>
+          </div>
+
+          <div class="chart-area" id="chartArea" hidden>
+            <div class="chart-block chart-block--donut">
+              <h3 id="donutChartTitle">学习 / 休息占比</h3>
+              <canvas id="donutChart" class="donut-chart" role="img" aria-label="学习与休息时长占比环形图"></canvas>
+              <div class="chart-legend">
+                <span><i class="legend-dot legend-dot--study"></i><span id="donutLegendStudy">学习 0min</span></span>
+                <span><i class="legend-dot legend-dot--rest"></i><span id="donutLegendRest">休息 0min</span></span>
+              </div>
+            </div>
+            <div class="chart-block chart-block--bars">
+              <h3 id="barChartTitle">每次任务时长</h3>
+              <canvas id="barChart" class="bar-chart" role="img" aria-label="每次任务时长柱状图"></canvas>
+              <p class="chart-hint" id="chartHint">按抽取顺序排列，虚线为平均时长</p>
+            </div>
+          </div>
+
+          <div class="data-actions">
+            <button class="btn btn-ghost btn-sm" id="exportBtn" type="button">导出数据</button>
+            <button class="btn btn-ghost btn-sm" id="importBtn" type="button">导入数据</button>
+            <input type="file" id="importFile" accept=".json,application/json" hidden>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="app-foot">
+      <span id="footerNote">数据仅保存在本机浏览器 · 支持查看往日数据</span>
+      <span class="foot-sep" aria-hidden="true">·</span>
+      <button class="link-btn" id="resetAllBtn" type="button">清空全部数据</button>
+    </footer>
+  </div>
+
+  <div class="modal" id="helpModal" hidden>
+    <div class="modal-backdrop" id="helpBackdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <div class="modal-head">
+        <div>
+          <h2 id="helpTitle">使用说明</h2>
+          <p class="modal-sub">Study Turntable · 一分钟上手</p>
+        </div>
+        <button class="modal-close" id="helpClose" type="button" aria-label="关闭使用说明">×</button>
+      </div>
+      <ol class="help-list">
+        <li>
+          <b>抽取任务</b>
+          <span>点击「抽取学习任务」或转盘中心的「抽取」，转盘停止后抽到的时长会自动记入任务栏。</span>
+        </li>
+        <li>
+          <b>计时规则</b>
+          <span>抽到学习任务，必须等倒计时结束才能再抽；抽到休息任务，可以随时点「跳过休息」抽下一轮。</span>
+        </li>
+        <li>
+          <b>任务栏</b>
+          <span>可勾选完成、删除记录、清空当日；用顶栏日期选择器可查看往日数据（只读）。</span>
+        </li>
+        <li>
+          <b>统计栏</b>
+          <span>切换今日 / 近 7 天 / 近 30 天查看累计数据，生成图表后可保存为 PNG，也可以随手收起。</span>
+        </li>
+        <li>
+          <b>数据备份</b>
+          <span>记录只保存在本机浏览器；可在统计栏导出 / 导入 JSON 备份，清空数据前建议先导出。</span>
+        </li>
+      </ol>
+      <div class="modal-foot">
+        <span>完全离线可用 · 数据保存在本机浏览器</span>
+        <button class="btn btn-primary btn-sm" id="helpOk" type="button">知道了</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/core.js"></script>
+  <script src="js/wheel.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

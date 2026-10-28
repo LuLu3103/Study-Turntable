@@ -1,0 +1,32 @@
+{
+  "app": "study-turntable",
+  "version": 1,
+  "exportedAt": "2026-10-28T13:13:40.727Z",
+  "days": {
+    "2026-10-28": {
+      "records": [
+        {
+          "id": "rmvs4xw27a6sa1",
+          "type": "study",
+          "minutes": 20,
+          "done": false,
+          "createdAt": 1793192011921
+        },
+        {
+          "id": "rest-test",
+          "type": "rest",
+          "minutes": 15,
+          "done": false,
+          "createdAt": 1793192311921
+        },
+        {
+          "id": "rmvs4xeos0px4b",
+          "type": "study",
+          "minutes": 10,
+          "done": true,
+          "createdAt": 1793192611921
+        }
+      ]
+    }
+  }
+}
