@@ -16,6 +16,7 @@
    # 浏览器打开 http://localhost:8000
    ```
 3. 本仓库已部署，可用浏览器直接访问：<https://lulu3103.github.io/Study-Turntable/>
+
 所有数据保存在浏览器的 `localStorage` 中（键名 `study-turntable:v1`），刷新或重开页面都不会丢失。
 
 ## 功能说明
